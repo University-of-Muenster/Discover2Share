@@ -1,0 +1,1586 @@
+<?xml version="1.0"?>
+<aws:UrlInfoResponse xmlns:aws="http://alexa.amazonaws.com/doc/2005-10-05/">
+<aws:Response xmlns:aws="http://awis.amazonaws.com/doc/2005-07-11">
+<aws:OperationRequest>
+<aws:RequestId>69f22f78-efb4-66d7-ed98-dde6d96699ac</aws:RequestId>
+</aws:OperationRequest>
+<aws:UrlInfoResult>
+<aws:Alexa>
+  
+  <aws:ContactInfo>
+    <aws:DataUrl type="canonical">flipkey.com</aws:DataUrl>
+    <aws:PhoneNumbers>
+      <aws:PhoneNumber/>
+    </aws:PhoneNumbers>
+    <aws:OwnerName/>
+    <aws:Email/>
+    <aws:PhysicalAddress/>
+    <aws:CompanyStockTicker/>
+  </aws:ContactInfo>
+  <aws:ContentData>
+    <aws:DataUrl type="canonical">flipkey.com</aws:DataUrl>
+    <aws:SiteData>
+      <aws:Title>Flipkey.com</aws:Title>
+      <aws:Description>FlipKey organizes the reputation of vacation rental properties throughout the world. Thousands of websites promote vacation rentals, but most websites promote the properties who have paid them the most money. At FlipKey we believe reputation, trust and feedback from past guests are the best resources to ensure you rent the ideal vacation home and have a fantastic vacation. Ultimately, FlipKey matches trusted guests with trusted vacation homes. ...</aws:Description>
+    </aws:SiteData>
+    <aws:Keywords/>
+    <aws:OwnedDomains/>
+  </aws:ContentData>
+  <aws:TrafficData>
+    <aws:DataUrl type="canonical">flipkey.com</aws:DataUrl>
+    <aws:Rank>6230</aws:Rank>
+    <aws:RankByCountry>
+      <aws:Country Code="IN">
+        <aws:Rank>17550</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.9%</aws:PageViews>
+          <aws:Users>4.7%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="ID">
+        <aws:Rank>11678</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.0%</aws:PageViews>
+          <aws:Users>0.9%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="SG">
+        <aws:Rank>3325</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.2%</aws:PageViews>
+          <aws:Users>1.1%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="TH">
+        <aws:Rank>1409</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>3.3%</aws:PageViews>
+          <aws:Users>4.6%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="TR">
+        <aws:Rank>21409</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="MY">
+        <aws:Rank>5239</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>1.1%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="IL">
+        <aws:Rank>3136</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="PR">
+        <aws:Rank>946</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="PH">
+        <aws:Rank>7463</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="ES">
+        <aws:Rank>5432</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>3.2%</aws:PageViews>
+          <aws:Users>2.2%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="US">
+        <aws:Rank>3293</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>47.3%</aws:PageViews>
+          <aws:Users>47.2%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="AU">
+        <aws:Rank>3205</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>4.0%</aws:PageViews>
+          <aws:Users>3.6%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="GB">
+        <aws:Rank>9248</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>2.4%</aws:PageViews>
+          <aws:Users>2.1%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="FR">
+        <aws:Rank>5199</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>4.4%</aws:PageViews>
+          <aws:Users>3.5%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="PT">
+        <aws:Rank>2928</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.5%</aws:PageViews>
+          <aws:Users>1.4%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="IT">
+        <aws:Rank>3501</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>5.9%</aws:PageViews>
+          <aws:Users>3.8%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="DO">
+        <aws:Rank>1007</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.1%</aws:PageViews>
+          <aws:Users>0.9%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="GR">
+        <aws:Rank>5982</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.0%</aws:PageViews>
+          <aws:Users>0.9%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="ZA">
+        <aws:Rank>8542</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.9%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="MX">
+        <aws:Rank>3586</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>2.2%</aws:PageViews>
+          <aws:Users>3.0%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="NL">
+        <aws:Rank>11054</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.1%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="CA">
+        <aws:Rank>3443</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>4.3%</aws:PageViews>
+          <aws:Users>3.9%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="JP">
+        <aws:Rank>28656</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>1.0%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="O">
+        <aws:Rank/>
+        <aws:Contribution>
+          <aws:PageViews>6.5%</aws:PageViews>
+          <aws:Users>7.6%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="PE">
+        <aws:Rank>2281</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.7%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="CR">
+        <aws:Rank>575</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>2.3%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+      <aws:Country Code="DE">
+        <aws:Rank>36305</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+        </aws:Contribution>
+      </aws:Country>
+    </aws:RankByCountry>
+    <aws:RankByCity>
+      <aws:City Code="803" Name="Los Angeles, CA, US">
+        <aws:Rank>2804</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>4.8%</aws:PageViews>
+          <aws:Users>4.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="501" Name="New York, NY, US">
+        <aws:Rank>3755</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>4.2%</aws:PageViews>
+          <aws:Users>4.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="807" Name="San Francisco, CA, US">
+        <aws:Rank>2858</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>3.7%</aws:PageViews>
+          <aws:Users>3.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C7" Name="Bangkok, TH">
+        <aws:Rank>1286</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>2.6%</aws:PageViews>
+          <aws:Users>3.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C37" Name="Paris, FR">
+        <aws:Rank>1115</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>3.3%</aws:PageViews>
+          <aws:Users>2.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>7.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="506" Name="Boston, MA, US">
+        <aws:Rank>2337</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>2.6%</aws:PageViews>
+          <aws:Users>2.0%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C1625" Name="Cozumel, MX">
+        <aws:Rank>15</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.5%</aws:PageViews>
+          <aws:Users>1.9%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="511" Name="Washington, DC, US">
+        <aws:Rank>3485</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.6%</aws:PageViews>
+          <aws:Users>1.7%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="528" Name="Miami, FL, US">
+        <aws:Rank>1427</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.8%</aws:PageViews>
+          <aws:Users>1.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="602" Name="Chicago, IL, US">
+        <aws:Rank>4032</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.2%</aws:PageViews>
+          <aws:Users>1.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="825" Name="San Diego, CA, US">
+        <aws:Rank>1942</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.1%</aws:PageViews>
+          <aws:Users>1.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="819" Name="Seattle-Tacoma, WA, US">
+        <aws:Rank>3388</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.2%</aws:PageViews>
+          <aws:Users>1.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="524" Name="Atlanta, GA, US">
+        <aws:Rank>2945</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.3%</aws:PageViews>
+          <aws:Users>1.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.2</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C2" Name="Singapore, SG">
+        <aws:Rank>3296</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.2%</aws:PageViews>
+          <aws:Users>1.0%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C85" Name="Sydney, AU">
+        <aws:Rank>2355</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.9%</aws:PageViews>
+          <aws:Users>1.0%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="618" Name="Houston, TX, US">
+        <aws:Rank>2769</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.9%</aws:PageViews>
+          <aws:Users>1.0%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C60" Name="New Delhi, IN">
+        <aws:Rank>6826</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>1.0%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.2</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="539" Name="Tampa, FL, US">
+        <aws:Rank>2274</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.9%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="504" Name="Philadelphia, PA, US">
+        <aws:Rank>4586</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.9%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="820" Name="Portland, OR, US">
+        <aws:Rank>2584</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C32" Name="Santo Domingo, DO">
+        <aws:Rank>998</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.0%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C14" Name="Lima, PE">
+        <aws:Rank>1852</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.7%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="753" Name="Phoenix, AZ, US">
+        <aws:Rank>3438</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.8%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="751" Name="Denver, CO, US">
+        <aws:Rank>3868</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C50" Name="London, GB">
+        <aws:Rank>7294</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C31" Name="Athens, GR">
+        <aws:Rank>5147</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="635" Name="Austin, TX, US">
+        <aws:Rank>2711</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.9%</aws:PageViews>
+          <aws:Users>0.7%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="560" Name="Raleigh-Durham, NC, US">
+        <aws:Rank>2724</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C76" Name="Hyderabad, IN">
+        <aws:Rank>12713</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>1.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="623" Name="Dallas-Fort Worth, TX, US">
+        <aws:Rank>5853</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C194" Name="Delhi, IN">
+        <aws:Rank>19159</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>1.8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="613" Name="Minneapolis-St Paul, MN, US">
+        <aws:Rank>4181</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.2</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C110" Name="Milan, IT">
+        <aws:Rank>2460</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.6%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="534" Name="Orlando, FL, US">
+        <aws:Rank>3640</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.6%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.2</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C1174" Name="Denpasar, ID">
+        <aws:Rank>305</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C37677" Name="Hunters Hill, AU">
+        <aws:Rank>17</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.7%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="744" Name="Honolulu, HI, US">
+        <aws:Rank>1243</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C5298" Name="Tel Aviv, IL">
+        <aws:Rank>1884</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.7%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C14033" Name="Moriyama, JP">
+        <aws:Rank>65</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C154322" Name="MontrÃ©al, QC, CA">
+        <aws:Rank>2574</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>1.0%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C70" Name="Rome, IT">
+        <aws:Rank>3773</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C29882" Name="Kanwal, AU">
+        <aws:Rank>5</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.7%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="505" Name="Detroit, MI, US">
+        <aws:Rank>4568</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C249" Name="Lisbon, PT">
+        <aws:Rank>1680</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C17257" Name="Plegamans, ES">
+        <aws:Rank>20</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.5%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="535" Name="Columbus, OH, US">
+        <aws:Rank>2358</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C1127" Name="Papeete, PF">
+        <aws:Rank>75</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C1296" Name="Nairobi, KE">
+        <aws:Rank>1377</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="862" Name="Sacramento, CA, US">
+        <aws:Rank>4142</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C91" Name="Toronto, ON, CA">
+        <aws:Rank>6790</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C11283" Name="Hornsby, AU">
+        <aws:Rank>97</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.7%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="527" Name="Indianapolis, IN, US">
+        <aws:Rank>3331</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>2.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="561" Name="Jacksonville, FL, US">
+        <aws:Rank>1992</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="510" Name="Cleveland, OH, US">
+        <aws:Rank>4292</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="571" Name="Ft Myers, FL, US">
+        <aws:Rank>1219</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C94" Name="Barcelona, ES">
+        <aws:Rank>4215</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.8%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>11</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C67" Name="Istanbul, TR">
+        <aws:Rank>17519</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C5096" Name="Yasu, JP">
+        <aws:Rank>55</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C218" Name="Pune, IN">
+        <aws:Rank>8443</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C1653" Name="Thornhill, ON, CA">
+        <aws:Rank>531</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>2.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C315" Name="Ipoh, MY">
+        <aws:Rank>607</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="508" Name="Pittsburgh, PA, US">
+        <aws:Rank>4077</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.2</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="839" Name="Las Vegas, NV, US">
+        <aws:Rank>3703</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="517" Name="Charlotte, NC, US">
+        <aws:Rank>4136</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C2029" Name="Lucca, IT">
+        <aws:Rank>171</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="770" Name="Salt Lake City, UT, US">
+        <aws:Rank>6951</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="659" Name="Nashville, TN, US">
+        <aws:Rank>4098</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="512" Name="Baltimore, MD, US">
+        <aws:Rank>4779</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="567" Name="Greenville-Spartenburg, SC, US">
+        <aws:Rank>2790</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="616" Name="Kansas City, MO, US">
+        <aws:Rank>4396</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="790" Name="Albuquerque, NM, US">
+        <aws:Rank>2120</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="544" Name="Norfolk-Portsmouth, VA, US">
+        <aws:Rank>2932</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C403" Name="Ottawa, ON, CA">
+        <aws:Rank>2149</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.3%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="686" Name="Mobile, AL, US">
+        <aws:Rank>1842</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="641" Name="San Antonio, TX, US">
+        <aws:Rank>2652</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.5%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>10</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C893" Name="Richmond Hill, ON, CA">
+        <aws:Rank>656</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.9%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>18</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C1261" Name="Cagliari, IT">
+        <aws:Rank>639</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>7</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="515" Name="Cincinnati, OH, US">
+        <aws:Rank>4427</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="521" Name="Providence, RI, US">
+        <aws:Rank>2967</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C68175" Name="San Juan, PR">
+        <aws:Rank>950</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C22841" Name="Guidonia, IT">
+        <aws:Rank>44</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="532" Name="Albany-Schenectady-Troy, NY, US">
+        <aws:Rank>3057</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C593" Name="Winnipeg, MB, CA">
+        <aws:Rank>1662</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="548" Name="West Palm Beach, FL, US">
+        <aws:Rank>4825</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="557" Name="Knoxville, TN, US">
+        <aws:Rank>2992</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>2.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C398" Name="Split, HR">
+        <aws:Rank>616</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>11</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C6495" Name="Pistoia, IT">
+        <aws:Rank>74</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C39" Name="Madrid, ES">
+        <aws:Rank>11316</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="609" Name="St Louis, MO, US">
+        <aws:Rank>7994</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="563" Name="Grand Rapids, MI, US">
+        <aws:Rank>4421</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="652" Name="Omaha, NE, US">
+        <aws:Rank>2515</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>10</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="855" Name="Santa Barbara, CA, US">
+        <aws:Rank>4152</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>2.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="811" Name="Reno, NV, US">
+        <aws:Rank>2193</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.2</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="556" Name="Richmond-Petersburg, VA, US">
+        <aws:Rank>4020</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.2%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="518" Name="Greensboro, NC, US">
+        <aws:Rank>4390</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="651" Name="Lubbock, TX, US">
+        <aws:Rank>932</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C166" Name="Surabaya, ID">
+        <aws:Rank>7986</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="617" Name="Milwaukee, WI, US">
+        <aws:Rank>6997</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="640" Name="Memphis, TN, US">
+        <aws:Rank>3131</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.3%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="566" Name="Harrisburg-Lancaster-Lebanon-York, PA, US">
+        <aws:Rank>4830</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="523" Name="Burlington, VT, US">
+        <aws:Rank>4731</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>2.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="881" Name="Spokane, WA, US">
+        <aws:Rank>3409</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="669" Name="Madison, WI, US">
+        <aws:Rank>4968</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.1</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="868" Name="Chico-Redding, CA, US">
+        <aws:Rank>1489</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.2%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>8</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="C133328" Name="Belgrade, RS">
+        <aws:Rank>5640</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>16</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="543" Name="Springfield-Holyoke, MA, US">
+        <aws:Rank>2482</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.4%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>14</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="533" Name="Hartford, CT, US">
+        <aws:Rank>14094</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.0%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>1.5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="789" Name="Tucson, AZ, US">
+        <aws:Rank>4356</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>6</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="650" Name="Oklahoma City, OK, US">
+        <aws:Rank>6003</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.0</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="630" Name="Birmingham, AL, US">
+        <aws:Rank>5727</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="693" Name="Little Rock-Pine Bluff, AR, US">
+        <aws:Rank>3969</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>2.9</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="592" Name="Gainesville, FL, US">
+        <aws:Rank>2571</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>5</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="575" Name="Chattanooga, TN, US">
+        <aws:Rank>3370</aws:Rank>
+        <aws:Contribution>
+          <aws:PageViews>0.1%</aws:PageViews>
+          <aws:Users>0.1%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>3.4</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+      <aws:City Code="O" Name="OTHER">
+        <aws:Rank/>
+        <aws:Contribution>
+          <aws:PageViews>29.1%</aws:PageViews>
+          <aws:Users>32.4%</aws:Users>
+          <aws:PerUser>
+            <aws:AveragePageViews>4.3</aws:AveragePageViews>
+          </aws:PerUser>
+        </aws:Contribution>
+      </aws:City>
+    </aws:RankByCity>
+    <aws:UsageStatistics>
+      <aws:UsageStatistic>
+        <aws:TimeRange>
+          <aws:Months>3</aws:Months>
+        </aws:TimeRange>
+        <aws:Rank>
+          <aws:Value>6230</aws:Value>
+          <aws:Delta>+2263</aws:Delta>
+        </aws:Rank>
+        <aws:Reach>
+          <aws:Rank>
+            <aws:Value>7139</aws:Value>
+            <aws:Delta>+2568</aws:Delta>
+          </aws:Rank>
+          <aws:PerMillion>
+            <aws:Value>202</aws:Value>
+            <aws:Delta>-37.45%</aws:Delta>
+          </aws:PerMillion>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:PerMillion>
+            <aws:Value>11.4</aws:Value>
+            <aws:Delta>-42.86%</aws:Delta>
+          </aws:PerMillion>
+          <aws:Rank>
+            <aws:Value>5808</aws:Value>
+            <aws:Delta>2191</aws:Delta>
+          </aws:Rank>
+          <aws:PerUser>
+            <aws:Value>5.19</aws:Value>
+            <aws:Delta>-8.63%</aws:Delta>
+          </aws:PerUser>
+        </aws:PageViews>
+      </aws:UsageStatistic>
+      <aws:UsageStatistic>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Rank>
+          <aws:Value>7402</aws:Value>
+          <aws:Delta>+434</aws:Delta>
+        </aws:Rank>
+        <aws:Reach>
+          <aws:Rank>
+            <aws:Value>8315</aws:Value>
+            <aws:Delta>+301</aws:Delta>
+          </aws:Rank>
+          <aws:PerMillion>
+            <aws:Value>174</aws:Value>
+            <aws:Delta>+1%</aws:Delta>
+          </aws:PerMillion>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:PerMillion>
+            <aws:Value>9.57</aws:Value>
+            <aws:Delta>-9.16%</aws:Delta>
+          </aws:PerMillion>
+          <aws:Rank>
+            <aws:Value>7219</aws:Value>
+            <aws:Delta>988</aws:Delta>
+          </aws:Rank>
+          <aws:PerUser>
+            <aws:Value>4.81</aws:Value>
+            <aws:Delta>-10.43%</aws:Delta>
+          </aws:PerUser>
+        </aws:PageViews>
+      </aws:UsageStatistic>
+      <aws:UsageStatistic>
+        <aws:TimeRange>
+          <aws:Days>7</aws:Days>
+        </aws:TimeRange>
+        <aws:Rank>
+          <aws:Value>7586</aws:Value>
+          <aws:Delta>-31</aws:Delta>
+        </aws:Rank>
+        <aws:Reach>
+          <aws:Rank>
+            <aws:Value>8547</aws:Value>
+            <aws:Delta>+97</aws:Delta>
+          </aws:Rank>
+          <aws:PerMillion>
+            <aws:Value>171</aws:Value>
+            <aws:Delta>-1.07%</aws:Delta>
+          </aws:PerMillion>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:PerMillion>
+            <aws:Value>9.6</aws:Value>
+            <aws:Delta>+6%</aws:Delta>
+          </aws:PerMillion>
+          <aws:Rank>
+            <aws:Value>7327</aws:Value>
+            <aws:Delta>-236</aws:Delta>
+          </aws:Rank>
+          <aws:PerUser>
+            <aws:Value>5.0</aws:Value>
+            <aws:Delta>+7%</aws:Delta>
+          </aws:PerUser>
+        </aws:PageViews>
+      </aws:UsageStatistic>
+      <aws:UsageStatistic>
+        <aws:TimeRange>
+          <aws:Days>1</aws:Days>
+        </aws:TimeRange>
+        <aws:Rank>
+          <aws:Value>7082</aws:Value>
+          <aws:Delta>-1542</aws:Delta>
+        </aws:Rank>
+        <aws:Reach>
+          <aws:Rank>
+            <aws:Value>7431</aws:Value>
+            <aws:Delta>-2434</aws:Delta>
+          </aws:Rank>
+          <aws:PerMillion>
+            <aws:Value>200</aws:Value>
+            <aws:Delta>+30%</aws:Delta>
+          </aws:PerMillion>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:PerMillion>
+            <aws:Value>8.6</aws:Value>
+            <aws:Delta>-3.89%</aws:Delta>
+          </aws:PerMillion>
+          <aws:Rank>
+            <aws:Value>8561</aws:Value>
+            <aws:Delta>237</aws:Delta>
+          </aws:Rank>
+          <aws:PerUser>
+            <aws:Value>3.9</aws:Value>
+            <aws:Delta>-25.86%</aws:Delta>
+          </aws:PerUser>
+        </aws:PageViews>
+      </aws:UsageStatistic>
+    </aws:UsageStatistics>
+    <aws:ContributingSubdomains>
+      <aws:ContributingSubdomain>
+        <aws:DataUrl>flipkey.com</aws:DataUrl>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Reach>
+          <aws:Percentage>84.18%</aws:Percentage>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:Percentage>64.12%</aws:Percentage>
+          <aws:PerUser>3.66</aws:PerUser>
+        </aws:PageViews>
+      </aws:ContributingSubdomain>
+      <aws:ContributingSubdomain>
+        <aws:DataUrl>secure.flipkey.com</aws:DataUrl>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Reach>
+          <aws:Percentage>32.72%</aws:Percentage>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:Percentage>31.89%</aws:Percentage>
+          <aws:PerUser>4.7</aws:PerUser>
+        </aws:PageViews>
+      </aws:ContributingSubdomain>
+      <aws:ContributingSubdomain>
+        <aws:DataUrl>help.flipkey.com</aws:DataUrl>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Reach>
+          <aws:Percentage>2.86%</aws:Percentage>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:Percentage>2.30%</aws:Percentage>
+          <aws:PerUser>3.9</aws:PerUser>
+        </aws:PageViews>
+      </aws:ContributingSubdomain>
+      <aws:ContributingSubdomain>
+        <aws:DataUrl>secure2.flipkey.com</aws:DataUrl>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Reach>
+          <aws:Percentage>0.79%</aws:Percentage>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:Percentage>1.42%</aws:Percentage>
+          <aws:PerUser>9</aws:PerUser>
+        </aws:PageViews>
+      </aws:ContributingSubdomain>
+      <aws:ContributingSubdomain>
+        <aws:DataUrl>helpcenter.flipkey.com</aws:DataUrl>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Reach>
+          <aws:Percentage>0.22%</aws:Percentage>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:Percentage>0.19%</aws:Percentage>
+          <aws:PerUser>4.2</aws:PerUser>
+        </aws:PageViews>
+      </aws:ContributingSubdomain>
+      <aws:ContributingSubdomain>
+        <aws:DataUrl>OTHER</aws:DataUrl>
+        <aws:TimeRange>
+          <aws:Months>1</aws:Months>
+        </aws:TimeRange>
+        <aws:Reach>
+          <aws:Percentage>0</aws:Percentage>
+        </aws:Reach>
+        <aws:PageViews>
+          <aws:Percentage>0.08%</aws:Percentage>
+          <aws:PerUser>0</aws:PerUser>
+        </aws:PageViews>
+      </aws:ContributingSubdomain>
+    </aws:ContributingSubdomains>
+  </aws:TrafficData>
+</aws:Alexa>
+</aws:UrlInfoResult>
+<aws:ResponseStatus xmlns:aws="http://alexa.amazonaws.com/doc/2005-10-05/">
+<aws:StatusCode>Success</aws:StatusCode>
+</aws:ResponseStatus>
+</aws:Response>
+</aws:UrlInfoResponse>
