@@ -105,10 +105,8 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 
 		/*
 		 * At first, retrieve a list of links for every listed entry
-		 */
-		String link = "//a[@class='orangetextbold']";
-
-		List<WebElement> entriesLink = driver.findElements(By.xpath(link));
+		 */			
+		List<WebElement> entriesLink = driver.findElements(By.className("text-slate"));
 		List<String> scrapeList = new ArrayList<String>();
 
 		System.out.println("We have found " + entriesLink.size()
@@ -160,15 +158,16 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 
 			// hit new page
 			goDriver.get(currentLink);
-
+			
 			/*
 			 * Get Category
 			 */
 			try {
-				String pathCategory = "//td/span/descendant::text()[starts-with(.,'Category:')]/following::td[1]";
-				String resultCat = goDriver.findElement(By.xpath(pathCategory))
-						.getText();
-
+				//String pathCategory = "//*[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Category:')]/following::span[1]/a";
+				String pathCategory = "//div[@class=\"directoryLinks\"]/following::span[1]/a";
+				WebElement resultCatElm = driver.findElement(By.xpath(pathCategory));
+				String resultCat = resultCatElm.getText();
+				System.out.println(resultCat);
 				if (!resultCat.isEmpty()) {
 					entriesCategory.add(resultCat);
 					System.out.println("Category: " + resultCat);
@@ -177,6 +176,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 					System.out.println("Category: N/A");
 				}
 			} catch (Exception e) {
+				System.out.println(e);
 				System.out.println(currentLink + " failed.");
 				System.out.println("Category: N/A");
 				entriesCategory.add("N/A");
