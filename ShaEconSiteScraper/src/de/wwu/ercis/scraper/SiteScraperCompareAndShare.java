@@ -12,6 +12,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import au.com.bytecode.opencsv.CSVWriter;
 
@@ -163,11 +165,14 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get Category
 			 */
 			try {
-				//String pathCategory = "//*[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Category:')]/following::span[1]/a";
-				String pathCategory = "//div[@class=\"directoryLinks\"]/following::span[1]/a";
-				WebElement resultCatElm = driver.findElement(By.xpath(pathCategory));
-				String resultCat = resultCatElm.getText();
-				System.out.println(resultCat);
+				
+				String pathCategory = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Category:')]/following::span[1]/a";
+
+				WebDriverWait wait = new WebDriverWait(goDriver,10);
+				WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathCategory)));
+				
+				String resultCat = element.getText();
+				
 				if (!resultCat.isEmpty()) {
 					entriesCategory.add(resultCat);
 					System.out.println("Category: " + resultCat);
@@ -186,7 +191,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get foundation date
 			 */
 			try {
-				String xpath = "//td/span/descendant::text()[starts-with(.,'Founded:')]/following::td[1]";
+				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Founded:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
 
 				if (!result.isEmpty()) {
@@ -206,7 +211,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get description
 			 */
 			try {
-				String xpath = "//span[@itemprop='description']";
+				String xpath = "//p[@itemprop='description']";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
 
 				if (!result.isEmpty()) {
@@ -226,7 +231,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get innovation date
 			 */
 			try {
-				String xpath = "//td/span/descendant::text()[starts-with(.,'Innovation:')]/following::td[1]";
+				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Innovation:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
 
 				if (!result.isEmpty()) {
@@ -246,7 +251,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get resource type
 			 */
 			try {
-				String xpath = "//td/span/descendant::text()[starts-with(.,'Resource Type:')]/following::td[1]";
+				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Resource Type:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
 
 				if (!result.isEmpty()) {
@@ -266,7 +271,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get delivery model
 			 */
 			try {
-				String xpath = "//td/span/descendant::text()[starts-with(.,'Delivery Model:')]/following::td[1]";
+				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Delivery Model:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
 
 				if (!result.isEmpty()) {
@@ -286,7 +291,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get Location
 			 */
 			try {
-				String pathLocation = "//td/span/descendant::text()[starts-with(.,'Location:')]/following::td[1]";
+				String pathLocation = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Location:')]/following::span[1]";
 				String resultLocation = goDriver.findElement(
 						By.xpath(pathLocation)).getText();
 
@@ -307,7 +312,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get Sub-Category
 			 */
 			try {
-				String pathSubCategory = "//td/span/descendant::text()[starts-with(.,'Sub Category:')]/following::td[1]";
+				String pathSubCategory = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Sub Category:')]/following::span[1]";
 				String resultSubCat = goDriver.findElement(
 						By.xpath(pathSubCategory)).getText();
 
@@ -329,7 +334,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get Payment Type
 			 */
 			try {
-				String pathPayment = "//td/span/descendant::text()[starts-with(.,'Payment Type:')]/following::td[1]";
+				String pathPayment = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Payment Type:')]/following::span[1]";
 				String resultPayment = goDriver.findElement(
 						By.xpath(pathPayment)).getText();
 
@@ -352,7 +357,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 */
 
 			try {
-				String pathUrl = "//td/span/descendant::text()[starts-with(.,'Website:')]/following::td[1]/a";
+				String pathUrl = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//a[@id='websiteCLicks']";
 				String resultUrl = goDriver.findElement(By.xpath(pathUrl))
 						.getAttribute("href");
 
@@ -374,7 +379,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get Impact
 			 */
 			try {
-				String pathImpact = "//td/span/descendant::text()[starts-with(.,'Impacts:')]/following::td[1]";
+				String pathImpact = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Impacts:')]/following::span[1]";
 				String resultImpact = goDriver
 						.findElement(By.xpath(pathImpact)).getText();
 
@@ -396,7 +401,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 */
 
 			try {
-				String pathTypeSharing = "//td/span/descendant::text()[starts-with(.,'Type of Sharing:')]/following::td[1]";
+				String pathTypeSharing = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Type of Sharing:')]/following::span[1]";
 				String resultTypeSharing = goDriver.findElement(
 						By.xpath(pathTypeSharing)).getText();
 
@@ -415,7 +420,6 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			
 			/*
 			 * Get Tags
-			 * //td/span/descendant::text()[starts-with(.,'Tags:')]/following::td[1]/a/text()
 			 */
 			try {
 				
@@ -453,7 +457,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 */
 
 			try {
-				String pathBusinessModel = "//td/span/descendant::text()[starts-with(.,'Business Model:')]/following::td[1]";
+				String pathBusinessModel = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Business Model:')]/following::span[1]";
 				String resultBusinessModel = goDriver.findElement(
 						By.xpath(pathBusinessModel)).getText();
 
@@ -474,7 +478,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			 * Get Name
 			 */
 			try {
-				String pathName = "//h2[@class='orangetextbold directoryListingTitle']";
+				String pathName = "//h2[@itemprop='name']";
 				String resultName = goDriver.findElement(By.xpath(pathName))
 						.getText();
 
