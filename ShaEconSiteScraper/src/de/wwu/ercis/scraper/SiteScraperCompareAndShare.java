@@ -168,6 +168,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				
 				String pathCategory = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Category:')]/following::span[1]/a";
 
+				// before scraping, wait until DOM is fully loaded
 				WebDriverWait wait = new WebDriverWait(goDriver,10);
 				WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pathCategory)));
 				

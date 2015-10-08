@@ -2,23 +2,17 @@ package de.wwu.ercis.scraper;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathExpression;
-import javax.xml.xpath.XPathFactory;
+import java.util.logging.Level;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import au.com.bytecode.opencsv.CSVWriter;
 
@@ -60,6 +54,7 @@ public class SiteScraperCollaborativeConsumption implements
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF);
 
 		SiteScraperInterface scraper = new SiteScraperCollaborativeConsumption(
 				"http://www.collaborativeconsumption.com/directory/page/$$/");
@@ -113,7 +108,7 @@ public class SiteScraperCollaborativeConsumption implements
 		/*
 		 * At first, retrieve a list of links for every listed entry
 		 */
-		String link = "//div[@class='container services']/div[@class='row']/div[@class='span12']/section[@class='row-fluid']/div[@class='span2']/*/div[@class='thumb']/a";
+		String link = "//div[@class='container services']/div[@class='row']/div[@class='span12']/section[@class='row-fluid']/div[@class='span2']/div[1]/div[@class='post-entry']/h3/a";
 		List<WebElement> entriesLink = driver.findElements(By.xpath(link));
 
 		System.out.println("We have found " + entriesLink.size()
@@ -179,32 +174,13 @@ public class SiteScraperCollaborativeConsumption implements
 				 * Get description
 				 */
 				try {
-					String selector = "//div[2]/div[3]/div/div[1]/div/article/div[2]/p/text()";
-					String data = (goDriver.getPageSource().toString());
-
-					data = data.replace("<![CDATA[", "");
-					data = data.replace("//<![CDATA[", "");
-					data = data.replace("//]]>", "");
-					data = data.replace("]]>", "");
-
-					InputSource source = new InputSource(new StringReader(data));
-
-					DocumentBuilderFactory domFactory = DocumentBuilderFactory
-							.newInstance();
-
-					DocumentBuilder builder = domFactory.newDocumentBuilder();
-
-					builder.isNamespaceAware();
-					Document doc = builder.parse(source);
-
-					XPathFactory xpathFactory = XPathFactory.newInstance();
-					XPath xpath = xpathFactory.newXPath();
-					XPathExpression expr = xpath.compile(selector);
-
-					String result = xpath.evaluate(selector, doc);
-					result = result.replaceAll(",", "");
-					result = result.trim();
-					result = result.replace("\n", "").replace("\r", "");
+					String xpath = "//div[@class='post']/*";
+					
+					// before scraping, wait until DOM is fully loaded
+					WebDriverWait wait = new WebDriverWait(goDriver,5);
+					WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+					
+					String result = element.getText();
 
 					if (!result.isEmpty()) {
 						System.out.println("Description: " + result);
@@ -223,33 +199,8 @@ public class SiteScraperCollaborativeConsumption implements
 				 * Get names
 				 */
 				try {
-					// h2[@class='directory-title']
-					String selector = "//h2[@class='directory-title']/text()";
-					String data = (goDriver.getPageSource().toString());
-
-					data = data.replace("<![CDATA[", "");
-					data = data.replace("//<![CDATA[", "");
-					data = data.replace("//]]>", "");
-					data = data.replace("]]>", "");
-
-					InputSource source = new InputSource(new StringReader(data));
-
-					DocumentBuilderFactory domFactory = DocumentBuilderFactory
-							.newInstance();
-
-					DocumentBuilder builder = domFactory.newDocumentBuilder();
-
-					builder.isNamespaceAware();
-					Document doc = builder.parse(source);
-
-					XPathFactory xpathFactory = XPathFactory.newInstance();
-					XPath xpath = xpathFactory.newXPath();
-					XPathExpression expr = xpath.compile(selector);
-
-					String result = xpath.evaluate(selector, doc);
-					result = result.replaceAll(",", "");
-					result = result.trim();
-					result = result.replace("\n", "").replace("\r", "");
+					String xpath = "//h2[@class='directory-title']";
+					String result = goDriver.findElement(By.xpath(xpath)).getText();	
 
 					if (!result.isEmpty()) {
 						System.out.println("Name: " + result);
@@ -260,87 +211,48 @@ public class SiteScraperCollaborativeConsumption implements
 					}
 
 				} catch (Exception e) {
-					// TODO: handle exception
+					System.out.println("Name: N/A");
+					entriesName.add("N/A");
 				}
 
 				/*
 				 * Get locations
 				 */
 				try {
-
-					String selector = "//p[@class='info']/strong[contains(.,'Location')]/following-sibling::text()[1]";
-					String data = (goDriver.getPageSource().toString());
-
-					data = data.replace("<![CDATA[", "");
-					data = data.replace("//<![CDATA[", "");
-					data = data.replace("//]]>", "");
-					data = data.replace("]]>", "");
-
-					InputSource source = new InputSource(new StringReader(data));
-
-					DocumentBuilderFactory domFactory = DocumentBuilderFactory
-							.newInstance();
-					DocumentBuilder builder = domFactory.newDocumentBuilder();
-
-					builder.isNamespaceAware();
-					Document doc = builder.parse(source);
-
-					XPathFactory xpathFactory = XPathFactory.newInstance();
-					XPath xpath = xpathFactory.newXPath();
-					XPathExpression expr = xpath.compile(selector);
-
-					String result = xpath.evaluate(selector, doc);
-
-					result = result.replaceAll(",", "");
-					result = result.trim();
-					result = result.replace("\n", "").replace("\r", "");
-
-					if (!result.isEmpty()) {
-						System.out.println("Location: " + result);
-						entriesLocation.add(result);
+					// check if 'Location' exists
+					String check = goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Location')]")).getText();
+					if (!check.isEmpty()) {
+						String xpath = "//p[@class='info']";
+						String temp = goDriver.findElement(By.xpath(xpath)).getText();
+						String result0 = temp.replaceAll("(Location:\\s)(.+)(\\n)*(.*\\n*)*", "$2");
+						String result = result0.replaceAll(",","");
+						
+						if (!result.isEmpty()) {
+							System.out.println("Location: " + result);
+							entriesLocation.add(result);
+						} else {
+							System.out.println("Location: N/A");
+							entriesLocation.add("N/A");
+						}
 					} else {
-						System.out.println("Location: N/A " + result);
+						System.out.println("Location: N/A");
 						entriesLocation.add("N/A");
 					}
-
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("Location: N/A");
+					entriesLocation.add("N/A");
 				}
 
 				/*
 				 * Get Year
 				 */
 				try {
-
-					String selector = "//p[@class='info']/strong[contains(.,'Year')]/following-sibling::text()[1]";
-					String data = (goDriver.getPageSource().toString());
-
-					data = data.replace("<![CDATA[", "");
-					data = data.replace("//<![CDATA[", "");
-					data = data.replace("//]]>", "");
-					data = data.replace("]]>", "");
-
-					InputSource source = new InputSource(new StringReader(data));
-
-					DocumentBuilderFactory domFactory = DocumentBuilderFactory
-							.newInstance();
-					DocumentBuilder builder = domFactory.newDocumentBuilder();
-
-					builder.isNamespaceAware();
-					Document doc = builder.parse(source);
-
-					XPathFactory xpathFactory = XPathFactory.newInstance();
-					XPath xpath = xpathFactory.newXPath();
-
-					XPathExpression expr = xpath.compile(selector);
-
-					String result = xpath.evaluate(selector, doc);
-
-					result = result.replaceAll(",", "");
-					result = result.trim();
-					result = result.replace("\n", "").replace("\r", "");
-
+					//check if 'Year of Origin' exists
+					String check1 = goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Year of Origin')]")).getText();
+					
+					String xpath = "//p[@class='info']";
+					String temp = goDriver.findElement(By.xpath(xpath)).getText();
+					String result = temp.replaceAll("(.+\\n)*(Year of Origin:\\s)(.+)(\\n)*(.*\\n*)*$", "$3");
 					if (!result.isEmpty()) {
 						System.out.println("Year: " + result);
 						entriesYear.add(result);
@@ -350,54 +262,31 @@ public class SiteScraperCollaborativeConsumption implements
 					}
 
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("Year: N/A");
+					entriesYear.add("N/A");
 				}
 
 				/*
 				 * Get Invest
 				 */
 				try {
-
-					String selector = "//p[@class='info']/strong[contains(.,'Invest')]/following-sibling::text()[1]";
-					String data = (goDriver.getPageSource().toString());
-
-					data = data.replace("<![CDATA[", "");
-					data = data.replace("//<![CDATA[", "");
-					data = data.replace("//]]>", "");
-					data = data.replace("]]>", "");
-
-					InputSource source = new InputSource(new StringReader(data));
-
-					DocumentBuilderFactory domFactory = DocumentBuilderFactory
-							.newInstance();
-					DocumentBuilder builder = domFactory.newDocumentBuilder();
-
-					builder.isNamespaceAware();
-					Document doc = builder.parse(source);
-
-					XPathFactory xpathFactory = XPathFactory.newInstance();
-					XPath xpath = xpathFactory.newXPath();
-
-					XPathExpression expr = xpath.compile(selector);
-
-					String result = xpath.evaluate(selector, doc);
-
-					result = result.replaceAll(",", "");
-					result = result.trim();
-					result = result.replace("\n", "").replace("\r", "");
-
+					//check if 'Investment' exists
+					String check1 = goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Investment')]")).getText();
+					
+					String xpath = "//p[@class='info']";
+					String temp = goDriver.findElement(By.xpath(xpath)).getText();
+					String result = temp.replaceAll("(.+\\n)*(Investment:\\s)(.+)(\\n)*(.*\\n*)*$", "$3");
 					if (!result.isEmpty()) {
-						System.out.println("Location: " + result);
+						System.out.println("Invest: " + result);
 						entriesInvest.add(result);
 					} else {
-						System.out.println("Location: N/A");
+						System.out.println("Invest: N/A");
 						entriesInvest.add("N/A");
 					}
-
+					
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.out.println("Invest: N/A");
+					entriesInvest.add("N/A");
 				}
 
 				/*
@@ -405,33 +294,8 @@ public class SiteScraperCollaborativeConsumption implements
 				 */
 				try {
 
-					String selector = "//p/a[@target='_blank']/@href";
-					String data = (goDriver.getPageSource().toString());
-
-					data = data.replace("<![CDATA[", "");
-					data = data.replace("//<![CDATA[", "");
-					data = data.replace("//]]>", "");
-					data = data.replace("]]>", "");
-
-					InputSource source = new InputSource(new StringReader(data));
-
-					DocumentBuilderFactory domFactory = DocumentBuilderFactory
-							.newInstance();
-					DocumentBuilder builder = domFactory.newDocumentBuilder();
-
-					builder.isNamespaceAware();
-					Document doc = builder.parse(source);
-
-					XPathFactory xpathFactory = XPathFactory.newInstance();
-					XPath xpath = xpathFactory.newXPath();
-
-					XPathExpression expr = xpath.compile(selector);
-
-					String result = xpath.evaluate(selector, doc);
-
-					result = result.replaceAll(",", "");
-					result = result.trim();
-					result = result.replace("\n", "").replace("\r", "");
+					String linkText = "Visit Website";
+					String result = goDriver.findElement(By.linkText(linkText)).getAttribute("href");
 
 					if (!result.isEmpty()) {
 						System.out.println("URL: " + result);
@@ -442,12 +306,12 @@ public class SiteScraperCollaborativeConsumption implements
 					}
 
 				} catch (Exception e) {
-					entriesUrl.add("N/A");
 					System.out.println("URL: N/A");
-					e.printStackTrace();
-
+					entriesUrl.add("N/A");
 				}
 			}
+			
+			goDriver.quit();
 
 		}
 
@@ -466,9 +330,9 @@ public class SiteScraperCollaborativeConsumption implements
 			// print to console
 			System.out.println("\nName:\t" + entriesName.get(index)
 					+ "\nYear:\t" + entriesYear.get(index) + "\nWebsite:\t"
-					+ entriesUrl.get(index) + "\nCatergory:\t" + "Location:\t"
-					+ entriesLocation.get(index) + "Description:\t"
-							+ entriesDescription.get(index));
+					+ entriesUrl.get(index) + "\nLocation:\t"
+					+ entriesLocation.get(index) + "\nDescription:\t"
+							+ entriesDescription.get(index)+"\n");
 
 			// write to csv
 			String[] currentLine = { entriesName.get(index),
