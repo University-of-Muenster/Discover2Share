@@ -48,8 +48,7 @@ public class FileAggregator {
 		List<String> header = new ArrayList<String>();
 		List<String> values = new ArrayList<String>();
 
-		// System.out.println("Extracting data from file <" + file.getName() +
-		// ">.");
+		System.out.println("Extracting data from file <" + file.getName() +">.");
 
 		try {
 
@@ -106,11 +105,11 @@ public class FileAggregator {
 			List<Element> resultsCont = contPath.evaluate(doc);
 
 			// ---- OUTPUT -----
-			// System.out.println("-------");
+			System.out.println("-------");
 
-			// System.out.println("TEST:\t" + testres.getText());
+			System.out.println("TEST:\t" + testres.getText());
 
-			// System.out.println("-------");
+			System.out.println("-------");
 			header.add("URL");
 			header.add("PAGEVIEWS");
 			header.add("MONTH");
@@ -122,10 +121,10 @@ public class FileAggregator {
 			values.add(resultMonth.getText());
 			values.add(rankResult.getText());
 
-			// System.out.println("URL:\t" + resultUrl.getText());
-			// System.out.println("VIEWS:\t" + resultsPageViews.getValue());
-			// System.out.println("MONTH:\t" + resultMonth.getText());
-			// System.out.println("RANK:\t" + rankResult.getText());
+			System.out.println("URL:\t" + resultUrl.getText());
+			System.out.println("VIEWS:\t" + resultsPageViews.getValue());
+			System.out.println("MONTH:\t" + resultMonth.getText());
+			System.out.println("RANK:\t" + rankResult.getText());
 
 			List<String> finalCont = new ArrayList<String>();
 
@@ -168,10 +167,10 @@ public class FileAggregator {
 			// TODO: handle exception
 		}
 
-//		System.out.println("HEADER");
-//		System.out.println(header);
-//		System.out.println("VALUES");
-//		System.out.println(values);
+		System.out.println("HEADER");
+		System.out.println(header);
+		System.out.println("VALUES");
+		System.out.println(values);
 
 		
 		
@@ -192,7 +191,7 @@ public class FileAggregator {
 		CSVWriter writer;
 		try {
 			
-			filename = "/Users/mo/Desktop/AwisResultsOut/out_"+filename;
+			filename = "/Users/sbaar/Desktop/AwisResultsOut/out_"+filename;
 			writer = new CSVWriter(new FileWriter(filename.concat(".csv")), ';');
 
 			// writer header and values

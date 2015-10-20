@@ -248,7 +248,7 @@ public class SiteScraperCollaborativeConsumption implements
 				 */
 				try {
 					//check if 'Year of Origin' exists
-					String check1 = goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Year of Origin')]")).getText();
+					goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Year of Origin')]")).getText();
 					
 					String xpath = "//p[@class='info']";
 					String temp = goDriver.findElement(By.xpath(xpath)).getText();
@@ -271,7 +271,7 @@ public class SiteScraperCollaborativeConsumption implements
 				 */
 				try {
 					//check if 'Investment' exists
-					String check1 = goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Investment')]")).getText();
+					goDriver.findElement(By.xpath("//p[@class='info']/strong[contains(.,'Investment')]")).getText();
 					
 					String xpath = "//p[@class='info']";
 					String temp = goDriver.findElement(By.xpath(xpath)).getText();

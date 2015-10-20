@@ -74,15 +74,14 @@ public class AlexaRanker {
 
 		LOGGER.setLevel(Level.FINEST);
 
-		LOGGER.log(Level.FINE, "Initializing Alexa Ranker...");
+		System.out.println("Initializing Alexa Ranker...");
 
 		readInUrlsFromCsv();
-		System.out.println(sites.size());
 
 		if (initFile() == true) {
-			LOGGER.fine("Ranker initialized.");
+			System.out.println("Ranker initialized.");
 		} else {
-			LOGGER.fine("Error initializing scraper!");
+			System.out.println("Error initializing scraper!");
 			System.exit(0);
 		}
 
@@ -108,14 +107,14 @@ public class AlexaRanker {
 			LOGGER.log(Level.SEVERE, "Could not read in file...");
 			e.printStackTrace();
 		}
-		LOGGER.fine("Read in " + sites.size() + " sites from CSV from <"
+		System.out.println("Read in " + sites.size() + " sites from CSV from <"
 				+ pathToFile + ">.");
 	}
 
 	/**
 	 * Opens a connection to Alexa and fetches data
 	 */
-	public static void getRank(String page, String url) {
+	public void getRank(String page, String url) {
 
 		String result = null;
 		String result_country = null;
@@ -192,12 +191,12 @@ public class AlexaRanker {
 				result_country_rank, result_pop };
 
 		// DEBUG
-		LOGGER.fine("\nURL:\t\t" + url + "\nRank:\t\t" + result
+		System.out.println("\nURL:\t\t" + url + "\nRank:\t\t" + result
 				+ "\nDelta:\t\t" + result_delta + "\nCountry:\t"
 				+ result_country + "\nRank Country:\t" + result_country_rank
 				+ "\nPop:\t\t" + result_pop + "\n");
 
-		// write line to csv
+		// write line to CSV
 		writer.writeNext(currentLine);
 
 	}
@@ -251,12 +250,11 @@ public class AlexaRanker {
 
 		for (int index = 0; index < sites.size(); index++) {
 
-			// for (int index = 0; index < 10; index++) {
-
 			String currentQuery = baseUrl
 					.replace(placeHolder, sites.get(index));
 
-			LOGGER.fine(currentQuery);
+			System.out.println("Index "+index+"/"+sites.size()+":");
+			System.out.println(currentQuery);
 
 			ranker.getRank(currentQuery, sites.get(index));
 		}
