@@ -30,7 +30,7 @@ public class AlexaRanker {
 	/**
 	 * API Key (Insight package)
 	 */
-	private final String API_KEY = "";
+	//private final String API_KEY = "";
 	
 	/**
 	 * 
