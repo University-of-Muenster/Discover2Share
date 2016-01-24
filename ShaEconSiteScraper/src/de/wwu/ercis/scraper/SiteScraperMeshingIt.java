@@ -64,10 +64,10 @@ public class SiteScraperMeshingIt implements SiteScraperInterface {
 				"http://meshing.it/mesh_directories/browse_a_to_z?page=$$");
 
 		/*
-		 * Max pages 382
-		 * 06.10.2015
+		 * Max pages 386
+		 * 23.01.2016
 		 */
-		scraper.scrape(382);
+		scraper.scrape(386);
 
 		scraper.finalize();
 	}
@@ -391,6 +391,8 @@ public class SiteScraperMeshingIt implements SiteScraperInterface {
 				System.out.println("Category: N/A");
 				entriesCategory.add("N/A");
 			}
+			
+			goDriver.close();
 		}
 
 		/*
@@ -419,7 +421,7 @@ public class SiteScraperMeshingIt implements SiteScraperInterface {
 			writer.writeNext(currentLine);
 		}
 
-		driver.quit();
+		driver.close();
 
 		// Return
 		return "";
