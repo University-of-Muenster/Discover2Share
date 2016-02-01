@@ -24,7 +24,7 @@ import au.com.bytecode.opencsv.CSVWriter;
  */
 public class SiteScraperCompareAndShare implements SiteScraperInterface {
 
-	private final static Logger LOGGER = Logger.getLogger(SiteScraperCompareAndShare.class.getName()); 
+	private final static Logger LOGGER = Logger.getLogger(SiteScraperCompareAndShare.class.getName());	
 	
 	/** Name of file containing scraping results */
 	private String fileName = "result-compare-n-share.csv";
@@ -59,15 +59,17 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF);
 
+		// site structure changed 2016
 		SiteScraperInterface scraper = new SiteScraperCompareAndShare(
-				"http://www.compareandshare.com/sharing-economy-directory/params/pageNo/$$/");
+				"http://www.compareandshare.com/sharing-economy-directory/search-results/params/pageNo/$$/");
 
 		/*
-		 * Max pages 392
-		 * 06.10.2015
+		 * Max pages 891
+		 * 24.01.2016 (site structure changed 2016)
 		 */
-		scraper.scrape(392);
+		scraper.scrape(891);
 
 		scraper.finalize();
 	}
@@ -98,7 +100,6 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 	 */
 	@Override
 	public String getElements(String page) {
-
 		System.out.println("Currently scraping page " + pagination + " .");
 
 		// Init new driver and get page
@@ -108,7 +109,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 		/*
 		 * At first, retrieve a list of links for every listed entry
 		 */			
-		List<WebElement> entriesLink = driver.findElements(By.className("text-slate"));
+		List<WebElement> entriesLink = driver.findElements(By.xpath("//div[@class='primaryInfoDarkGrey']/a"));
 		List<String> scrapeList = new ArrayList<String>();
 
 		System.out.println("We have found " + entriesLink.size()
@@ -129,6 +130,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 		List<String> entriesUrl = new ArrayList<String>();
 		List<String> entriesCategory = new ArrayList<String>();
 		List<String> entriesSubCategory = new ArrayList<String>();
+		/*
 		List<String> entriesPayment = new ArrayList<String>();
 		List<String> entriesImpact = new ArrayList<String>();
 		List<String> entriesTypeSharing = new ArrayList<String>();
@@ -140,6 +142,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 		List<String> entriesInnovation = new ArrayList<String>();
 		List<String> entriesDescription = new ArrayList<String>();
 		List<String> entriesTags = new ArrayList<String>();
+		*/
 
 		/*
 		 * Now visit all links and scrape contents
@@ -162,11 +165,11 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			goDriver.get(currentLink);
 			
 			/*
-			 * Get Category
+			 * Get Category (new: 01-2016)
 			 */
 			try {
 				
-				String pathCategory = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Category:')]/following::span[1]/a";
+				String pathCategory = "//div[contains(concat(' ', @class, ' '), ' directoryResults ')]//p/descendant::text()[starts-with(.,'Category:')]/following::a[1]";
 
 				// before scraping, wait until DOM is fully loaded
 				WebDriverWait wait = new WebDriverWait(goDriver,10);
@@ -191,6 +194,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			/*
 			 * Get foundation date
 			 */
+			/*
 			try {
 				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Founded:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
@@ -207,30 +211,47 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Founded: N/A");
 				entriesFounded.add("N/A");
 			}
+			*/
 
 			/*
-			 * Get description
+			 * Get description (new: 24.01.16)
 			 */
+			/*
 			try {
-				String xpath = "//p[@itemprop='description']";
-				String result = goDriver.findElement(By.xpath(xpath)).getText();
-
-				if (!result.isEmpty()) {
-					entriesDescription.add(result);
-					System.out.println("Description: " + result);
-				} else {
-					entriesDescription.add("N/A");
-					System.out.println("Description: N/A");
+				
+				// sometimes the description is in a "<p>"-tag, sometimes it's just simple text
+				// thus, we have to try both ways to get the description... :-/
+				try {
+					String xpath = "//div[contains(concat(' ', @class, ' '), ' col-xs-12 ')]/h2[text()='Company Information']/../../../../p";
+					String result = goDriver.findElement(By.xpath(xpath)).getText();
+					if (!result.isEmpty()) {
+						entriesDescription.add(result);
+						System.out.println("Description: " + result);
+					} else {
+						entriesDescription.add("N/A");
+						System.out.println("Description: N/A");
+					}
+				} catch (Exception e) {
+					String xpath = "//div[contains(concat(' ', @class, ' '), ' col-xs-12 ')]/h2[text()='Company Information']/../../../../../div";
+					String result = goDriver.findElement(By.xpath(xpath)).getText().replaceAll("Company Information", "").replace("\n", "").replace("\r", "");
+					if (!result.isEmpty()) {
+						entriesDescription.add(result);
+						System.out.println("Description: " + result);
+					} else {
+						entriesDescription.add("N/A");
+						System.out.println("Description: N/A");
+					}
 				}
 			} catch (Exception e) {
-				System.out.println(currentLink + " failed.");
 				System.out.println("Description: N/A");
 				entriesDescription.add("N/A");
 			}
+			*/
 
 			/*
 			 * Get innovation date
 			 */
+			/*
 			try {
 				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Innovation:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
@@ -247,10 +268,12 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Innovation: N/A");
 				entriesInnovation.add("N/A");
 			}
+			*/
 
 			/*
 			 * Get resource type
 			 */
+			/*
 			try {
 				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Resource Type:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
@@ -267,10 +290,12 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Resource Type: N/A");
 				entriesResource.add("N/A");
 			}
+			*/
 
 			/*
 			 * Get delivery model
 			 */
+			/*
 			try {
 				String xpath = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Delivery Model:')]/following::span[1]";
 				String result = goDriver.findElement(By.xpath(xpath)).getText();
@@ -287,10 +312,12 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Delivery Model: N/A");
 				entriesDelivery.add("N/A");
 			}
+			*/
 
 			/*
 			 * Get Location
 			 */
+			/*
 			try {
 				String pathLocation = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Location:')]/following::span[1]";
 				String resultLocation = goDriver.findElement(
@@ -308,14 +335,15 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Location: N/A");
 				entriesLocation.add("N/A");
 			}
+			*/
 
 			/*
-			 * Get Sub-Category
+			 * Get Sub-Category (new: 01-2016)
 			 */
 			try {
-				String pathSubCategory = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Sub Category:')]/following::span[1]";
+				String pathSubCategory = "//div[contains(concat(' ', @class, ' '), ' directoryResults ')]//p[starts-with(.,'Sub-Category: ')]";
 				String resultSubCat = goDriver.findElement(
-						By.xpath(pathSubCategory)).getText();
+						By.xpath(pathSubCategory)).getText().replaceAll("Sub-Category: ", "");
 
 				if (!resultSubCat.isEmpty()) {
 					entriesSubCategory.add(resultSubCat);
@@ -334,6 +362,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			/*
 			 * Get Payment Type
 			 */
+			/*
 			try {
 				String pathPayment = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Payment Type:')]/following::span[1]";
 				String resultPayment = goDriver.findElement(
@@ -352,13 +381,14 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Payment Type: N/A");
 				entriesPayment.add("N/A");
 			}
+			*/
 
 			/*
-			 * Get URL for webiste
+			 * Get URL for website (new: 01-2016)
 			 */
 
 			try {
-				String pathUrl = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//a[@id='websiteCLicks']";
+				String pathUrl = "//i[contains(concat(' ', @class, ' '), ' fa-li fa fa-home fa-lg ')]/following-sibling::a";
 				String resultUrl = goDriver.findElement(By.xpath(pathUrl))
 						.getAttribute("href");
 
@@ -379,6 +409,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 			/*
 			 * Get Impact
 			 */
+			/*
 			try {
 				String pathImpact = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Impacts:')]/following::span[1]";
 				String resultImpact = goDriver
@@ -396,11 +427,12 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Impact: N/A");
 				entriesImpact.add("N/A");
 			}
+			*/
 
 			/*
 			 * Get Type of Sharing
 			 */
-
+			/*
 			try {
 				String pathTypeSharing = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Type of Sharing:')]/following::span[1]";
 				String resultTypeSharing = goDriver.findElement(
@@ -418,10 +450,12 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Type of Sharing: N/A");
 				entriesTypeSharing.add("N/A");
 			}
+			*/
 			
 			/*
 			 * Get Tags
 			 */
+			/*
 			try {
 				
 				String xpath = "//a[starts-with(@href,'/sharing-economy-directory/listing/tags/')]";
@@ -452,11 +486,12 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Tags: N/A");
 				entriesTags.add("N/A");
 			}
+			*/
 			
 			/*
 			 * Get Business Model
 			 */
-
+			/*
 			try {
 				String pathBusinessModel = "//div[contains(concat(' ', @class, ' '), ' directoryLinks ')]//span/descendant::text()[starts-with(.,'Business Model:')]/following::span[1]";
 				String resultBusinessModel = goDriver.findElement(
@@ -474,12 +509,13 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				System.out.println("Business Model: N/A");
 				entriesBusinessModel.add("N/A");
 			}
+			*/
 
 			/*
-			 * Get Name
+			 * Get Name (new: 01-2016)
 			 */
 			try {
-				String pathName = "//h2[@itemprop='name']";
+				String pathName = "//div[contains(concat(' ', @class, ' '), ' primaryInfoDarkGrey ')]/a";
 				String resultName = goDriver.findElement(By.xpath(pathName))
 						.getText();
 
@@ -496,6 +532,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 				entriesName.add("N/A");
 			}
 
+			/*
 			System.out.println("\tList Compare:            "
 					+ "\n\tCategories:\t"
 					+ entriesCategory.size()
@@ -527,6 +564,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 					+ entriesInnovation.size()
 					+ "\n\tDescription\t"
 					+ entriesDescription.size());
+			*/
 			/*
 			 * Now aggregate all retrieved information and write to file:
 			 * entriesName entriesUrl entriesCategory entriesSubCategory
@@ -543,6 +581,7 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 		for (int index = 0; index < entriesUrl.size(); index++) {
 
 			// write to csv
+			/*
 			String[] currentLine = { entriesName.get(index),
 					entriesUrl.get(index), entriesCategory.get(index),
 					entriesSubCategory.get(index), entriesPayment.get(index),
@@ -551,8 +590,13 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 					entriesLocation.get(index), entriesFounded.get(index),
 					entriesResource.get(index), entriesDelivery.get(index),
 					entriesInnovation.get(index), entriesTags.get(index), entriesDescription.get(index) };
+			*/
+			String[] currentLine = { entriesName.get(index),
+					entriesUrl.get(index), entriesCategory.get(index),
+					entriesSubCategory.get(index) };
 
 			writer.writeNext(currentLine);
+			
 		}
 
 		driver.quit();
@@ -571,10 +615,13 @@ public class SiteScraperCompareAndShare implements SiteScraperInterface {
 
 			writer = new CSVWriter(new FileWriter(fileName), ';');
 
+			/*
 			String[] header = { "Name", "Website", "Category", "Sub Category",
 					"Payment Type", "Impacts", "Type of Sharing",
 					"Business Model", "Location", "Founded", "Resource Type",
 					"Delivery Model", "Innovation", "Tags", "Description" };
+			*/
+			String[] header = { "name", "url", "category", "sub category" };
 
 			// writer header
 			writer.writeNext(header);
