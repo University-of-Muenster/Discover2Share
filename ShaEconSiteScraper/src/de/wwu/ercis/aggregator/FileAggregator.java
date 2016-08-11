@@ -191,7 +191,7 @@ public class FileAggregator {
 		CSVWriter writer;
 		try {
 			
-			filename = "/Users/sbaar/Desktop/AwisResultsOut/out_"+filename;
+			filename = "./AWIS_result_parsed/"+filename;
 			writer = new CSVWriter(new FileWriter(filename.concat(".csv")), ';');
 
 			// writer header and values
@@ -238,8 +238,8 @@ public class FileAggregator {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
-		final File folder = new File("/Users/sbaar/Desktop/JBE_Alexa_Data");
+		// Iteration 3 data
+		final File folder = new File("./ITER3_AWIS_results");
 		listFilesForFolder(folder);
 	}
 

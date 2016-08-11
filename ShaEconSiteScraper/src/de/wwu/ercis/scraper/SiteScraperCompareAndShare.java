@@ -19,9 +19,11 @@ import au.com.bytecode.opencsv.CSVWriter;
 
 /**
  * {@link SiteScraperMeshingIt} is used to scrape content from web sites.
- * 
+ * Deprecated since this sharing website does not exist anymore
  * @author mo
  */
+
+@Deprecated
 public class SiteScraperCompareAndShare implements SiteScraperInterface {
 
 	private final static Logger LOGGER = Logger.getLogger(SiteScraperCompareAndShare.class.getName());	
