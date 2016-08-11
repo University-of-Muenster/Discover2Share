@@ -67,8 +67,8 @@ public class AlexaConnector {
 			// compose args for 
 			
 			// AKIAIICLE7RCKPKMMUPA 7Ym3vyutzxh/5rdqCAefDcQC0v/PhCJqtAeG5Fwp airbnb.com
-			String accessKey = "AKIAIZ5MCTSM55SS4KNA";
-			String secretKey = "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";
+			String accessKey = "lalala"; // input real keys here
+			String secretKey = "lalala";
 			String site = line;
 			// invoke main of UrlInfo
 			try {
